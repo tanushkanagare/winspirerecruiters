@@ -67,6 +67,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+html,
+body {
+    max-width: 100%;
+    overflow-x: clip;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -544,15 +550,16 @@ h2 {
 .hero-arrow-field svg {
   width: 100%;
   height: 100%;
+  display: block;
 }
 
 .hero .wrap {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  /* gap: clamp(2rem, 5vw, 4rem); */
+  grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
+  gap: 4rem;
 }
 
 .hero-copy h1 {
@@ -1597,7 +1604,6 @@ h2 {
     height: 76px;
     position: relative;
   }
-
   /* Hide desktop navigation initially */
   .nav-links {
     position: fixed;
@@ -1607,7 +1613,10 @@ h2 {
     bottom: 0;
 
     width: 100%;
+    max-width: 100%;
     height: calc(100vh - 76px);
+
+    box-sizing: border-box;
 
     display: flex;
     flex-direction: column;
@@ -1732,68 +1741,8 @@ h2 {
   .grid-3 {
     grid-template-columns: repeat(2, 1fr);
   }
+
 }
-
-/* @media (max-width: 900px) {
-  .nav-links {
-    position: fixed;
-    inset: 76px 0 0 0;
-    background: var(--paper);
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 2rem var(--gutter);
-    gap: 1.6rem;
-    transform: translateX(100%);
-    transition: transform var(--dur-md) var(--ease);
-    overflow-y: auto;
-    z-index: 999;
-  }
-
-  .nav-links.is-open {
-    transform: translateX(0);
-  }
-
-  .nav-links a {
-    font-size: 1.15rem;
-  }
-
-  .nav-toggle {
-    display: flex;
-  }
-
-  .nav-cta .btn-outline {
-    display: none;
-  }
-
-  .hero .wrap {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-visual {
-    order: -1;
-    max-width: 340px;
-    margin: 0 auto 1rem;
-  }
-
-  .about-grid,
-  .registration-grid,
-  .audience-split,
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .registration-grid .qr-card {
-    justify-self: start;
-  }
-
-  .mobile-only-btn {
-    display: inline-flex;
-  }
-
-  .grid-3 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-} */
 
 @media (max-width: 640px) {
   .grid-4,
@@ -1833,7 +1782,6 @@ h2 {
     align-items: stretch;
   }
 }
-
 
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
