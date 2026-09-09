@@ -16,6 +16,8 @@
   --paper-dim: #f0eee8;
   --white: #ffffff;
 
+  --slate-gray: #4A5568;
+
   --ink: #171a22;
   --ink-soft: #4c5265;
 
@@ -259,6 +261,7 @@ select:focus-visible {
 } */
  .section{
   padding: 20px;
+  background: var(--white);
  }
 
 .section-head {
@@ -407,15 +410,17 @@ h2 {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(248, 247, 244, 0.9);
+  /* background: rgba(248, 247, 244, 0.9); */
+  background: #f7f9fc;
   backdrop-filter: blur(10px);
   border-bottom: 1px solid transparent;
   transition: background var(--dur-sm) var(--ease), border-color var(--dur-sm) var(--ease),
-    box-shadow var(--dur-sm) var(--ease);
+  box-shadow var(--dur-sm) var(--ease);
 }
 
 .navbar.is-scrolled {
-  background: rgba(248, 247, 244, 0.97);
+  /* background: rgba(248, 247, 244, 0.97); */
+   background: #f7f9fc;
   border-color: var(--line);
   box-shadow: 0 6px 24px -18px rgba(14, 23, 48, 0.4);
 }
@@ -530,13 +535,12 @@ h2 {
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  background: radial-gradient(120% 120% at 85% -10%, var(--navy-600) 0%, var(--navy-700) 45%, var(--navy-800) 100%);
+  /* background: radial-gradient(120% 120% at 85% -10%, var(--navy-600) 0%, var(--navy-700) 45%, var(--navy-800) 100%); */
+  background: #12355b;
   color: var(--white);
   overflow: hidden;
   padding-top: 20px;
   padding-bottom: 20px;
-  /* padding-top: clamp(3.5rem, 8vw, 6rem);
-  padding-bottom: clamp(3.5rem, 8vw, 6rem); */
 }
 
 .hero-arrow-field {
@@ -685,7 +689,8 @@ h2 {
 
 /* ---------- Marquee-style positioning strip ---------- */
 .positioning-strip {
-  background: var(--navy-800);
+  /* background: var(--navy-800); */
+  background: #12355b;
   color: var(--white);
   padding: 1.1rem 0;
   border-top: 1px solid var(--line-dark);
@@ -784,7 +789,8 @@ h2 {
 .positioning-banner {
   margin-top: 2.2rem;
   padding: 8px;
-  background: var(--navy-900);
+  /* background: var(--navy-900); */
+   background: #12355b;
   color: var(--white);
   border-radius: var(--radius-md);
   border-left: 4px solid var(--rust-600);
@@ -844,8 +850,8 @@ h2 {
 
 /* ---------- Services ---------- */
 .services-section {
-  /* background: var(--navy-950); */
-  background: var(--paper-dim);
+  /* background: var(--paper-dim); */
+  background: #f7f9fc;
   color: var(--white);
 }
 
@@ -892,7 +898,8 @@ h2 {
 
 /* ---------- Process ---------- */
 .process-section {
-  background: var(--paper);
+  /* background: var(--paper); */
+  background:var(--white)
 }
 
 .process-tabs-wrapper {
@@ -1023,7 +1030,8 @@ h2 {
 
 /* ---------- QR / Candidate registration ---------- */
 .registration-section {
-  background: var(--paper-dim);
+  /* background: var(--paper-dim); */
+  background: #f7f9fc;
   color: var(--ink);
   position: relative;
   overflow: hidden;
@@ -1285,6 +1293,7 @@ h2 {
 ========================= */
 .Testimonial-section{
   padding: 10px 10px;
+  background: var(--white);
 }
 .testimonial-slider {
     width: 100%;
@@ -1425,7 +1434,8 @@ h2 {
 
 /* ---------- Footer ---------- */
 .footer {
-  background:var(--navy-800);
+  /* background:var(--navy-800); */
+  background: #12355b;
   color: #97a1bf;
   padding: 20px 20px;
 }
@@ -1806,5 +1816,463 @@ h2 {
 
   .btn:hover {
     transform: none;
+  }
+}
+
+
+/* =========================================================
+   JOB OPPORTUNITIES PAGE
+   ========================================================= */
+
+.job-opportunities-page {
+  background: #f7f9fc;
+  padding: 80px 20px;
+  min-height: 100vh;
+}
+
+.job-opportunity {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+/* =========================================================
+   PAGE INTRO
+   ========================================================= */
+
+.job-opportunity > h1 {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #12355b;
+  margin: 0 0 18px;
+  letter-spacing: -0.5px;
+}
+
+.intro-text {
+  max-width: 850px;
+  margin: 0 auto 60px;
+  text-align: center;
+  color: #5d6878;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   JOB SECTION
+   ========================================================= */
+
+.job-section {
+  margin-bottom: 65px;
+}
+
+.job-section > h2 {
+  position: relative;
+  font-size: 1.8rem;
+  color: #12355b;
+  font-weight: 700;
+  margin: 0 0 28px;
+  padding-left: 18px;
+}
+
+.job-section > h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 5px;
+  height: 30px;
+  background: var(--rust-600);
+  border-radius: 4px;
+}
+
+/* =========================================================
+   JOB CARD
+   ========================================================= */
+
+.job-card {
+  background: #ffffff;
+  border: 1px solid #e5eaf0;
+  border-radius: 14px;
+  padding: 28px 30px;
+  margin-bottom: 20px;
+
+  box-shadow: 0 5px 18px rgba(18, 53, 91, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-3px);
+  border-color: #cfd9e5;
+  box-shadow: 0 10px 28px rgba(18, 53, 91, 0.1);
+}
+
+/* =========================================================
+   JOB CARD HEADING
+   ========================================================= */
+
+.job-card h3 {
+  margin: 0 0 7px;
+  color: #173f68;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* =========================================================
+   ROLE LEVEL
+   ========================================================= */
+
+.role-level {
+  display: inline-block;
+  margin: 0 0 18px;
+  color: var(--rust-600);
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+/* =========================================================
+   ROLE PILLS
+   ========================================================= */
+
+.small-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 20px;
+}
+
+.small-pills span {
+  display: inline-flex;
+  align-items: center;
+
+  background: #f1f5f9;
+  color: #34495e;
+
+  border: 1px solid #e1e7ee;
+  border-radius: 50px;
+
+  padding: 7px 13px;
+
+  font-size: 0.84rem;
+  font-weight: 500;
+  line-height: 1.3;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.small-pills span:hover {
+  background: #eaf2fa;
+  border-color: #c8d9e9;
+  color: #123f69;
+}
+
+/* =========================================================
+   JOB DESCRIPTION
+   ========================================================= */
+
+.job-description {
+  margin: 0;
+  padding-top: 17px;
+  border-top: 1px solid #edf0f3;
+
+  color: #667384;
+  font-size: 0.94rem;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   CANDIDATE SKILLS SECTION
+   ========================================================= */
+
+.candidate-section {
+  margin-top: 80px;
+  padding: 55px 45px;
+
+  background: #ffffff;
+  border: 1px solid #e3e9ef;
+  border-radius: 18px;
+
+  box-shadow: 0 6px 25px rgba(18, 53, 91, 0.06);
+}
+
+.candidate-section > h2 {
+  margin: 0 0 12px;
+
+  text-align: center;
+
+  color: #12355b;
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.candidate-section > p {
+  max-width: 750px;
+  margin: 0 auto 35px;
+
+  text-align: center;
+
+  color: #667384;
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   SKILL COLUMNS
+   ========================================================= */
+
+.skill-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.skill-card {
+  padding: 28px;
+
+  background: #f8fafc;
+  border: 1px solid #e4eaf0;
+  border-radius: 13px;
+}
+
+.skill-card h3 {
+  margin: 0 0 12px;
+
+  color: #173f68;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.skill-card p {
+  margin: 0;
+
+  color: #667384;
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   FINAL CTA
+   ========================================================= */
+
+.opportunity-cta {
+  margin-top: 65px;
+  padding: 60px 30px;
+
+  text-align: center;
+
+  background: #12355b;
+  border-radius: 20px;
+
+  box-shadow: 0 12px 35px rgba(18, 53, 91, 0.15);
+}
+
+.opportunity-cta h2 {
+  margin: 0 0 14px;
+
+  color: #ffffff;
+
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+}
+
+.opportunity-cta > p {
+  max-width: 700px;
+  margin: 0 auto 32px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   QR CARD
+   ========================================================= */
+
+.opportunity-cta .qr-card {
+  width: fit-content;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: #ffffff;
+
+  padding: 18px 18px 15px;
+
+  border-radius: 14px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.opportunity-cta .qr-card img {
+  display: block;
+
+  width: 260px;
+  max-width: 100%;
+  height: auto;
+
+  border-radius: 5px;
+}
+
+.qr-card-label {
+  display: block;
+
+  margin-top: 12px;
+
+  color: #12355b;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .job-opportunities-page {
+    padding: 60px 16px;
+  }
+
+  .intro-text {
+    font-size: 0.98rem;
+    margin-bottom: 45px;
+  }
+
+  .job-section {
+    margin-bottom: 50px;
+  }
+
+  .job-section > h2 {
+    font-size: 1.55rem;
+  }
+
+  .job-card {
+    padding: 23px 22px;
+  }
+
+  .candidate-section {
+    padding: 40px 25px;
+    margin-top: 55px;
+  }
+
+  .skill-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .opportunity-cta {
+    margin-top: 50px;
+    padding: 45px 20px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .job-opportunities-page {
+    padding: 45px 12px;
+  }
+
+  .job-opportunity > h1 {
+    font-size: 1.9rem;
+  }
+
+  .intro-text {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 38px;
+  }
+
+  .job-section > h2 {
+    font-size: 1.35rem;
+    padding-left: 14px;
+  }
+
+  .job-section > h2::before {
+    width: 4px;
+    height: 24px;
+    top: 3px;
+  }
+
+  .job-card {
+    padding: 20px 17px;
+    border-radius: 12px;
+  }
+
+  .job-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .role-level {
+    font-size: 0.8rem;
+  }
+
+  .small-pills {
+    gap: 7px;
+  }
+
+  .small-pills span {
+    padding: 6px 10px;
+    font-size: 0.76rem;
+  }
+
+  .job-description {
+    font-size: 0.87rem;
+    line-height: 1.65;
+  }
+
+  .candidate-section {
+    padding: 32px 17px;
+    border-radius: 14px;
+  }
+
+  .candidate-section > h2 {
+    font-size: 1.5rem;
+  }
+
+  .candidate-section > p {
+    font-size: 0.9rem;
+  }
+
+  .skill-card {
+    padding: 21px 18px;
+  }
+
+  .skill-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .skill-card p {
+    font-size: 0.87rem;
+  }
+
+  .opportunity-cta {
+    padding: 38px 16px;
+    border-radius: 15px;
+  }
+
+  .opportunity-cta h2 {
+    font-size: 1.45rem;
+  }
+
+  .opportunity-cta > p {
+    font-size: 0.88rem;
+  }
+
+  .opportunity-cta .qr-card img {
+    width: 220px;
   }
 }
