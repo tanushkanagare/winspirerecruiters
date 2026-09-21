@@ -278,10 +278,10 @@ select:focus-visible {
 
 .eyebrow {
   font-family: var(--font-mono);
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--rust-700);
+  color: var(--rust-600);
   font-weight: 600;
   display: inline-flex;
   align-items: center;
@@ -290,16 +290,18 @@ select:focus-visible {
 }
 
 .eyebrow::before {
-  content: "";
+  /* content: ""; */
   width: 22px;
   height: 2px;
-  background: var(--rust-600);
+  /* background: var(--rust-600); */
   display: inline-block;
 }
 
 h2 {
   /* font-size: clamp(1.9rem, 3.4vw, 2.7rem); */
   letter-spacing: -0.01em;
+  color: #173f68;
+  font-size: 18px;
 }
 
 .section-sub {
@@ -429,8 +431,9 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 76px;
-  gap: 1rem;
+  height: 80px;
+  gap: 1.2rem;
+  padding: 0;
 }
 
 .brand {
@@ -438,14 +441,14 @@ h2 {
   align-items: center;
   gap: 0.65rem;
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1.05rem;
-  color: var(--navy-900);
+  color: #12355b;
   letter-spacing: 0.01em;
 }
 
 .brand img {
-  height: 42px;
+  height: 44px;
   width: auto;
 }
 
@@ -453,6 +456,7 @@ h2 {
   display: flex;
   flex-direction: column;
   line-height: 1.15;
+  margin-top: 4px;
 }
 
 .brand-name span {
@@ -471,9 +475,10 @@ h2 {
 }
 
 .nav-links a {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--navy-800);
+  font-family: var(--font-mono);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #173f68;
   position: relative;
   padding: 0.3rem 0;
 }
@@ -536,7 +541,7 @@ h2 {
 .hero {
   position: relative;
   /* background: radial-gradient(120% 120% at 85% -10%, var(--navy-600) 0%, var(--navy-700) 45%, var(--navy-800) 100%); */
-  background: #12355b;
+  background: #f7f9fc;
   color: var(--white);
   overflow: hidden;
   padding-top: 20px;
@@ -567,8 +572,10 @@ h2 {
 }
 
 .hero-copy h1 {
-  color: var(--white);
-  font-size: 22px;
+  /* color: var(--white); */
+  color: #173f68;
+  font-size: 18px;
+  font-weight: 600;
   letter-spacing: -0.015em;
 }
 
@@ -577,14 +584,14 @@ h2 {
   color: var(--rust-600);
 }
 
-.hero-copy .eyebrow::before {
+/* .hero-copy .eyebrow::before {
   background: var(--rust-600);
-}
+} */
 
 .hero-lede {
   margin-top: 1.4rem;
-  font-size: 1.15rem;
-  color: #c3c9dc;
+  font-size: 1.05rem;
+  color:var(--ink);
   max-width: 560px;
 }
 
@@ -603,13 +610,14 @@ h2 {
   font-family: var(--font-mono);
   font-size: 0.78rem;
   letter-spacing: 0.04em;
-  color: #97a1bf;
+  color: #173f68;
 }
 
 .hero-trust span {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  font-family: var(--font-body);
 }
 
 .hero-trust span::before {
@@ -690,7 +698,7 @@ h2 {
 /* ---------- Marquee-style positioning strip ---------- */
 .positioning-strip {
   /* background: var(--navy-800); */
-  background: #12355b;
+  background: var(--ink);
   color: var(--white);
   padding: 1.1rem 0;
   border-top: 1px solid var(--line-dark);
@@ -727,7 +735,8 @@ h2 {
 }
 
 .card {
-  background: var(--white);
+  /* background: var(--white); */
+  background:#f7f9fc;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   padding: 1.9rem 1.7rem;
@@ -738,7 +747,7 @@ h2 {
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 40px -24px rgba(14, 23, 48, 0.28);
-  border-color: var(--navy-600);
+  border-color: var(--ink-soft);
 }
 
 .card-icon {
@@ -761,10 +770,12 @@ h2 {
 .card h3 {
   font-size: 1.15rem;
   margin-bottom: 0.55rem;
+  color: #173f68;
+  font-weight: 600;
 }
 
 .card p {
-  color: var(--ink-soft);
+  color: var(--ink);
   font-size: 0.97rem;
 }
 
@@ -781,7 +792,8 @@ h2 {
 }
 
 .about-copy p {
-  color: var(--ink-soft);
+  font-family: var(--font-body);
+  color: var(--ink);
   font-size: 16px;
   gap: 1px;
 }
@@ -790,7 +802,7 @@ h2 {
   margin-top: 2.2rem;
   padding: 8px;
   /* background: var(--navy-900); */
-   background: #12355b;
+   background: var(--ink);
   color: var(--white);
   border-radius: var(--radius-md);
   border-left: 4px solid var(--rust-600);
@@ -807,8 +819,8 @@ h2 {
 .positioning-banner p {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 14px;
-  color: var(--white);
+  font-size:20px;
+  color: #DFE3EE;
   text-align: center;
 }
 
@@ -866,7 +878,9 @@ h2 {
 }
 
 .services-section .card h3 {
-  color: var(--navy-950);
+  color: #173f68;
+  font-size: 16px;
+  font-family: var(--font-body);
 }
 
 .services-section .card p {
@@ -893,13 +907,15 @@ h2 {
 }
 
 .on-dark h2{
-  color: var(--ink);
+  color: #173f68;
+  font-size: 18px;
+  font-family: var(--font-display);
 }
 
 /* ---------- Process ---------- */
 .process-section {
   /* background: var(--paper); */
-  background:var(--white)
+  background:#f7f9fc;
 }
 
 .process-tabs-wrapper {
@@ -930,7 +946,7 @@ h2 {
 }
 
 .process-tab[aria-selected="true"] {
-  background: var(--navy-900);
+  background: var(--ink);
   color: var(--white);
 }
 
@@ -1019,19 +1035,19 @@ h2 {
 
 .candidate-note {
   margin-top: 2rem;
-  background: var(--rust-100);
+  background: var(--ink);
   border-left: 4px solid var(--rust-600);
   border-radius: var(--radius-sm);
   padding: 1.1rem 1.4rem;
   font-size: 0.95rem;
-  color: var(--rust-700);
+  color: var(--white);
   font-weight: 600;
 }
 
 /* ---------- QR / Candidate registration ---------- */
 .registration-section {
   /* background: var(--paper-dim); */
-  background: #f7f9fc;
+  background: var(--white);
   color: var(--ink);
   position: relative;
   overflow: hidden;
@@ -1116,7 +1132,7 @@ h2 {
   font-weight: 600;
 }
 .client-head{
-  color: var(--white);
+  color: #12355b;
 }
 
 /* ---------- Split CTA ---------- */
@@ -1435,8 +1451,8 @@ h2 {
 /* ---------- Footer ---------- */
 .footer {
   /* background:var(--navy-800); */
-  background: #12355b;
-  color: #97a1bf;
+  background: var(--white);
+  color: #12355b;
   padding: 20px 20px;
 }
 
@@ -1460,12 +1476,13 @@ h2 {
 
 .footer-brand-name {
   font-family: var(--font-display);
-  color: var(--white);
+  color: #12355b;
   font-weight: 700;
 }
 
 .footer-tagline {
-  color: #6e79a0;
+  color: #12355b;
+  font-weight: 600;
   font-size: 0.92rem;
   max-width: 240px;
 }
@@ -1475,7 +1492,7 @@ h2 {
   font-size: 0.72rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--white);
+  color: #12355b;
   margin-bottom: 1rem;
   font-weight: 700;
 }
@@ -1487,11 +1504,12 @@ h2 {
 
 .footer-links a {
   font-size: 0.92rem;
+  font-weight: 400;
   transition: color var(--dur-sm) var(--ease);
 }
 
 .footer-links a:hover {
-  color: var(--white);
+  color: var(--ink);
 }
 
 .footer-social {
@@ -1826,7 +1844,7 @@ h2 {
 
 .job-opportunities-page {
   background: #f7f9fc;
-  padding: 80px 20px;
+  padding: 20px 20px;
   min-height: 100vh;
 }
 
